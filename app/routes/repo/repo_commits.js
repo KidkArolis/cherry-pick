@@ -9,9 +9,6 @@ module.exports = Route.extend({
       self.setContext({
         commits: commits
       });
-      return new Promise(function (resolve) {
-        setTimeout(resolve, 3000);
-      });
     });
   },
   componentClass: Commits
