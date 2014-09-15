@@ -6,7 +6,7 @@ var React = require("react");
 module.exports = React.createClass({
 
   getInitialState: function() {
-    return {value: 'KidkArolis/cherrypick'};
+    return {value: 'KidkArolis/cherry-pick'};
   },
 
   handleChange: function(event) {
