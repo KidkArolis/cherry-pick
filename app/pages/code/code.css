@@ -1,0 +1,10 @@
+.code {
+  padding: 50px 100px;
+  list-style: none;
+}
+.code li {
+  font-size: 14px;
+  margin: 4px;
+  padding: 4px;
+  border-bottom: 1px solid #eee;
+}

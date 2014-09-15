@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+}
+
+.application {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  padding: 0;
+  width: 100%;
+  flex: 1;
+}
+
+.navbar {
+  background: #fcd68a;
+  border: none;
+  margin: 0;
+}
+
+.navbar-header {
+  text-align: center;
+  float: none;
+}
+
+.navbar-brand {
+  display: inline-block;
+  height: auto;
+  float: none;
+  font-weight: bold;
+}
+
+#nprogress .spinner {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.footer {
+  color: #aaa;
+  border-top: 1px solid #eee;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+}
