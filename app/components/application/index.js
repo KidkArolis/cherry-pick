@@ -11,7 +11,7 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <div className='application'>
+      <div className='Application'>
         <div className='navbar-wrapper'>
           <div className='container'>
 

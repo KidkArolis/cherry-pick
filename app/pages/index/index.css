@@ -1,4 +1,4 @@
-.indexPage {
+.IndexPage {
   text-align: center;
   display: flex;
   align-items: center;
@@ -6,19 +6,19 @@
   min-height: 50vh;
 }
 
-.indexPage-logo {
+.IndexPage-logo {
   /*margin: auto;*/
   margin: 20px 0 400px 30px;
 }
 
-.indexPage-repoInput {
+.IndexPage-repoInput {
   width: 400px;
   padding: 10px;
   font-size: 24px;
   text-align: center;
 }
 
-.indexPage-repoInput[disabled] {
+.IndexPage-repoInput[disabled] {
   color: #888;
   background: #eee;
 }

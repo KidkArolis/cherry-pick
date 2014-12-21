@@ -5,7 +5,7 @@ body {
   font-weight: lighter;
 }
 
-.application {
+.Application {
   display: flex;
   min-height: 100vh;
   flex-direction: column;

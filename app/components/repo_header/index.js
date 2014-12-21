@@ -7,7 +7,7 @@ module.exports = React.createClass({
   render: function () {
     return (
       <div>
-        <div className='repoHeader'>
+        <div className='RepoHeader'>
           {this.props.repo}
           <ul className='nav nav-tabs'>
             <li><a href={this.props.router.generate('repo.code')}>Code</a></li>

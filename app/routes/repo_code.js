@@ -1,6 +1,6 @@
 var Route = require('react-route');
-var github = require('../../github');
-var Code = require('../../pages/code');
+var github = require('../github');
+var Code = require('../pages/code');
 
 module.exports = Route.extend({
   componentClass: Code,

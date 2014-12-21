@@ -7,8 +7,8 @@ var R = require('ramda');
 module.exports = React.createClass({
   render: function () {
     var commits = R.map(function (commit) {
-      return (<li>{commit.commit.message}</li>);
+      return (<li key={commit.sha}>{commit.commit.message}</li>);
     }, this.props.commits);
-    return (<ul className='commits'>{commits}</ul>);
+    return (<ul className='Commits'>{commits}</ul>);
   }
 });
