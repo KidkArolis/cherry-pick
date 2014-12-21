@@ -10,8 +10,8 @@ module.exports = React.createClass({
         <div className='repoHeader'>
           {this.props.repo}
           <ul className='nav nav-tabs'>
-            <li><a href={this.props.link('repo.code')}>Code</a></li>
-            <li><a href={this.props.link('repo.commits')}>Commits</a></li>
+            <li><a href={this.props.router.generate('repo.code')}>Code</a></li>
+            <li><a href={this.props.router.generate('repo.commits')}>Commits</a></li>
           </ul>
         </div>
         <div>

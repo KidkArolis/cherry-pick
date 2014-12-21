@@ -4,7 +4,8 @@ var Application = require('../../pages/application');
 
 module.exports = Route.extend({
   componentClass: Application,
-  afterRender: function () {
+  render: function (context) {
+    this.component = this.createComponent(context);
     React.renderComponent(this.component, document.body);
   }
 });

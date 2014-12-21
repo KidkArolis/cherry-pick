@@ -7,10 +7,8 @@ module.exports = Route.extend({
   model: function () {
     var self = this;
     var repo = this.get('org') + '/' + this.get('repo');
-    return github.code(repo).then(function (code) {
-      self.setContext({
-        code: code
-      });
-    });
+    return {
+      code: github.code(repo)
+    };
   }
 });

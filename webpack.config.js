@@ -6,11 +6,9 @@ module.exports = {
   otuput: {
     path: "dist"
   },
-  // devtool: "inline-source-map",
-  devtool: "eval",
+  devtool: "inline-source-map",
   resolve: {
     alias: {
-      "vertx": __dirname + "/vertx",
       "react-route": __dirname + "/lib/react-route"
     },
   },
@@ -21,10 +19,10 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loader: "jsx" },
       { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.woff$/,   loader: "url-loader?limit=10000&minetype=application/font-woff" },
-      { test: /\.ttf$/,    loader: "file-loader" },
-      { test: /\.eot$/,    loader: "file-loader" },
-      { test: /\.svg$/,    loader: "file-loader" }
+      { test: /\.woff$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.ttf$/, loader: "file-loader" },
+      { test: /\.eot$/, loader: "file-loader" },
+      { test: /\.svg$/, loader: "file-loader" }
     ]
   }
 };

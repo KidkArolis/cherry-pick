@@ -4,9 +4,11 @@
  * We organised the route handlers into folders by resource.
  */
 
+var Route = require('react-route');
+
 module.exports = {
   'application': require('./application/application'),
-  'index': require('./application/index'),
+  'index': route(require('../pages/index')),
   'loading': require('./application/loading'),
   
   'organisation': require('./organisation/organisation'),
@@ -17,3 +19,9 @@ module.exports = {
   'repo.commits.loading': require('./repo/repo_commits_loading'),
   'repo.code': require('./repo/repo_code')
 };
+
+function route(Component) {
+  return Route.extend({
+    componentClass: Component
+  });
+}

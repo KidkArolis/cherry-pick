@@ -1,19 +1,14 @@
 require('bootstrap/dist/css/bootstrap.css');
-
 var Cherrytree = require('cherrytree');
-var HistoryLocation = require('cherrytree/locations/history');
-
-var routes = require('./routes');
-var routeHandlers = require('./routes/handlers');
 
 var router = new Cherrytree({
-  location: new HistoryLocation(),
-  map: routes,
-  routes: routeHandlers,
-  BaseRoute: require('react-route')
+  map: require('./routes'),
+  handlers: require('./routes/handlers'),
+  defaultRouteHandler: require('react-route')
 });
 router.startRouting();
 
-module.exports = router;
-
+// for debugging and such
 window.router = router;
+
+module.exports = router;

@@ -4,7 +4,7 @@
   "description": "A demo app for Cherrytree router",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --colors --inline",
+    "start": "webpack-dev-server --colors --inline --no-info",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -21,11 +21,11 @@
   },
   "dependencies": {
     "bootstrap": "^3.2.0",
-    "cherrytree": "git://github.com/QubitProducts/cherrytree#latest-router-js",
+    "cherrytree": "^0.6.0",
     "nprogress": "^0.1.6",
     "ramda": "^0.4.3",
     "randomcolor": "^0.1.1",
     "react-bootstrap": "^0.12.0",
-    "rest": "^1.2.0"
+    "rest": "git://github.com/cujojs/rest#dev"
   }
 }

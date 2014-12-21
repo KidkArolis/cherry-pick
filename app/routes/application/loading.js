@@ -4,9 +4,12 @@ var Route = require('react-route');
 
 module.exports = Route.extend({
   activate: function () {
-    NProgress.start();
+    this.loader = setTimeout(function () {
+      NProgress.start();
+    }, 400);
   },
   deactivate: function () {
+    clearTimeout(this.loader);
     NProgress.done();
   }
 });

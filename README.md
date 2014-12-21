@@ -11,3 +11,7 @@ npm install
 npm start
 open http://localhost:8080/bundle
 ```
+
+# TODO
+
+- [ ] add a changelog tab that compiles changelog from commits + tags, filters merge commits
