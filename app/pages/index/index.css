@@ -11,6 +11,10 @@
   margin: 20px 0 400px 30px;
 }
 
+.IndexPage-description {
+  text-align: center;
+}
+
 .IndexPage-repoInput {
   width: 400px;
   padding: 10px;

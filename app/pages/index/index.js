@@ -27,6 +27,7 @@ module.exports = React.createClass({
     return (
       <div className='IndexPage'>
         <div>
+          <p className='IndexPage-description'>Cherry-pick is a demo app showing how to use Cherrytree router with React.js</p>
           <h2>Enter a GitHub repo</h2>
           <form onSubmit={this.handleSubmit}>
             <input
