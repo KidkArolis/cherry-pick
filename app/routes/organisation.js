@@ -1,6 +1,6 @@
-var Route = require('react-route');
+import Route from 'react-route';
 
-module.exports = Route.extend({
+export default Route.extend({
   model: function (params) {
     return params;
   }

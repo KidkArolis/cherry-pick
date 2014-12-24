@@ -1,14 +1,18 @@
-/** @jsx React.DOM */
+import './commits.css';
+import React from 'react';
+import R from 'ramda';
 
-require('./commits.css');
-var React = require('react');
-var R = require('ramda');
-
-module.exports = React.createClass({
-  render: function () {
-    var commits = R.map(function (commit) {
-      return (<li key={commit.sha}>{commit.commit.message}</li>);
-    }, this.props.commits);
-    return (<ul className='Commits'>{commits}</ul>);
+export default React.createClass({
+  render() {
+    return (
+      <ul className='Commits'>
+        {this.commits()(this.props.commits)}
+      </ul>
+    );
+  },
+  commits() {
+    return R.map((commit) =>
+      <li className='Commits-commit' key={commit.sha}>{commit.commit.message}</li>
+    );
   }
 });

@@ -1,7 +1,6 @@
-var React = require('react');
-var Route = require('react-route');
-var Application = require('../components/application');
+import Route from 'react-route';
+import Application from '../components/application';
 
-module.exports = Route.extend({
+export default Route.extend({
   componentClass: Application
 });

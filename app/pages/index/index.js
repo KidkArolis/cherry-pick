@@ -1,19 +1,19 @@
 /** @jsx React.DOM */
 
-require('./index.css');
-var React = require("react");
+import './index.css';
+import React from "react";
 
-module.exports = React.createClass({
+export default React.createClass({
 
-  getInitialState: function() {
+  getInitialState() {
     return {value: 'KidkArolis/cherry-pick'};
   },
 
-  handleChange: function(event) {
+  handleChange(event) {
     this.setState({value: event.target.value});
   },
 
-  handleSubmit: function (e) {
+  handleSubmit(e) {
     e.preventDefault();
     var repo = this.refs.repoInput.getDOMNode().value.split('/');
     // this.setState(this.getInitialState());
@@ -21,7 +21,7 @@ module.exports = React.createClass({
     this.props.router.transitionTo('repo.commits', repo[0], repo[1]);
   },
 
-  render: function () {
+  render() {
     var value = this.state.value;
     var disabled = this.state.disabled;
     return (
@@ -44,7 +44,7 @@ module.exports = React.createClass({
     );
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
     var repoInput = this.refs.repoInput.getDOMNode();
     repoInput.focus();
     repoInput.select();

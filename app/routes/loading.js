@@ -1,8 +1,8 @@
-require('nprogress/nprogress.css');
-var NProgress = require('nprogress');
-var Route = require('react-route');
+import 'nprogress/nprogress.css';
+import NProgress from 'nprogress';
+import Route from 'react-route';
 
-module.exports = Route.extend({
+export default Route.extend({
   activate: function () {
     this.loader = setTimeout(function () {
       NProgress.start();

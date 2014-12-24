@@ -1,9 +1,14 @@
-require('bootstrap/dist/css/bootstrap.css');
-var Cherrytree = require('cherrytree');
+import 'bootstrap/dist/css/bootstrap.css';
+import "6to5/polyfill";
+
+import Cherrytree from 'cherrytree';
+import React from 'react';
+import ReactRoute from 'react-route';
+import routes from './routes';
 
 var router = new Cherrytree({
-  map: require('./routes'),
-  defaultRouteHandler: require('react-route'),
+  map: routes,
+  defaultRouteHandler: ReactRoute,
   resolver: resolver
 });
 router.startRouting();
@@ -11,12 +16,13 @@ router.startRouting();
 // for debugging and such
 window.router = router;
 // to enable the React Dev Tools
-window.React = require("react");
+window.React = React;
 
-module.exports = router;
+export default router;
 
 // this is a webpack specific way of automatically
-// loading the route file for each route
+// loading the route file in asynchronously for each
+// route. We might use System.import in future in ES6.
 function resolver(name, cb) {
   try {
     cb(require("./routes/" + name.replace(/\./, "_")));

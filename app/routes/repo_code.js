@@ -1,11 +1,10 @@
-var Route = require('react-route');
-var github = require('../github');
-var Code = require('../pages/code');
+import Route from 'react-route';
+import github from '../github';
+import Code from '../pages/code';
 
-module.exports = Route.extend({
+export default Route.extend({
   componentClass: Code,
   model: function () {
-    var self = this;
     var repo = this.get('org') + '/' + this.get('repo');
     return {
       code: github.code(repo)

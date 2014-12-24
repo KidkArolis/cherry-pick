@@ -24,6 +24,8 @@
   "indent": 2,
   "maxlen": 120,
 
+  "esnext": true,
+
   "globals": {
     "define": true,
     "require": true,

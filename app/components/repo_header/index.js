@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 
-require('./repo_header.css');
-var React = require("react");
+import './repo_header.css';
+import React from 'react';
 
 module.exports = React.createClass({
   render: function () {

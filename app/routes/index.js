@@ -1,6 +1,6 @@
-var Route = require('react-route');
-var Index = require('../pages/index');
+import Route from 'react-route';
+import Index from '../pages/index';
 
-module.exports = Route.extend({
+export default Route.extend({
   componentClass: Index
 });

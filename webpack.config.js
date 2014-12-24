@@ -3,8 +3,9 @@ var webpack = require('webpack');
 module.exports = {
   context: __dirname,
   entry: "./index",
-  otuput: {
-    path: "dist"
+  output: {
+    path: "dist",
+    filename: "bundle.js"
   },
   devtool: "inline-source-map",
   resolve: {
@@ -17,7 +18,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.js$/, loader: "jsx" },
+      { test: /\.js$/, exclude: /node_modules/, loader: "6to5?modules=commonInterop" },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.woff$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
       { test: /\.ttf$/, loader: "file-loader" },

@@ -1,7 +1,7 @@
-var Route = require('react-route');
-var RepoHeader = require('../components/repo_header');
+import Route from 'react-route';
+import RepoHeader from '../components/repo_header';
 
-module.exports = Route.extend({
+export default Route.extend({
   componentClass: RepoHeader,
   model: function (params) {
     return params;

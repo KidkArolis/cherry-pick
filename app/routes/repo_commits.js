@@ -1,8 +1,8 @@
-var Route = require('react-route');
-var Commits = require('../pages/commits');
-var github = require('../github');
+import Route from 'react-route';
+import Commits from '../pages/commits';
+import github from '../github';
 
-module.exports = Route.extend({
+export default Route.extend({
   componentClass: Commits,
   model: function () {
     return {

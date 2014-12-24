@@ -1,12 +1,12 @@
 /** @jsx React.DOM */
 
-require('./code.css');
-var React = require('react');
-var R = require('ramda');
+import './code.css';
+import React from 'react';
+import R from 'ramda';
 
-module.exports = React.createClass({
-  render: function () {
-    var files = R.map(function (item) {
+export default React.createClass({
+  render() {
+    var files = R.map((item) => {
       return (<li key={item.sha}>{item.path}</li>);
     }, this.props.code.tree);
     return (<ul className='Code'>{files}</ul>);

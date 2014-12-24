@@ -2,12 +2,12 @@
   padding: 50px 100px;
   list-style: none;
 }
-.Commits li {
+.Commits-commit {
   font-size: 14px;
   margin-top: 6px;
   padding-bottom: 7px;
   border-bottom: 1px solid #f2f2f2;
 }
-.Commits li:last-child {
+.Commits-commit:last-child {
   border-bottom: none;
 }

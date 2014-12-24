@@ -1,9 +1,7 @@
-var rest, mime, client;
+import rest from 'rest';
+import mime from 'rest/interceptor/mime';
 
-rest = require('rest');
-mime = require('rest/interceptor/mime');
-
-client = rest.wrap(mime);
+var client = rest.wrap(mime);
 
 function get(path) {
   return client({
@@ -16,10 +14,11 @@ function get(path) {
   });
 }
 
-module.exports.commits = function (repo) {
+export function commits(repo) {
   return get('repos/' + repo + '/commits');
-};
-module.exports.code = function (repo, sha) {
+}
+
+export function code(repo, sha) {
   sha = sha || 'master';
   return get('repos/' + repo + '/git/trees/' + sha);
-};
+}
